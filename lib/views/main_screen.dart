@@ -40,6 +40,7 @@ class _MainScreenState extends State<MainScreen> {
               letterSpacing: -0.8),
         ),
         backgroundColor: const Color.fromARGB(255, 51, 58, 67),
+        surfaceTintColor: const Color.fromARGB(255, 51, 58, 67),
         actions: [
           IconButton(
             onPressed: () {},
