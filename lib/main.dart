@@ -1,7 +1,20 @@
 import 'package:apppelican_3_flutter/views/main_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+//statusbar and navigation bar color
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Color.fromARGB(255, 41, 47, 54),
+      systemNavigationBarColor: Color.fromARGB(255, 41, 47, 54),
+      statusBarBrightness: Brightness.dark,
+    ),
+  );
+
+  //lock orientation
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
