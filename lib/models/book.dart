@@ -1,39 +1,36 @@
-class Article {
-  bool? articleOfTheWeek;
+class Book {
   String? author;
+  bool? bookOfTheWeek;
   String? coverUrl;
   String? date;
   String? description;
-  String? header;
   String? id;
+  String? link;
   String? title;
-  String? body;
   String? languageCode;
   List<AudioFiles>? audioFiles;
 
-  Article(
-      {this.articleOfTheWeek,
-      this.author,
+  Book(
+      {this.author,
+      this.bookOfTheWeek,
       this.coverUrl,
       this.date,
       this.description,
-      this.header,
       this.id,
+      this.link,
       this.title,
-      this.body,
       this.languageCode,
       this.audioFiles});
 
-  Article.fromJson(Map<String, dynamic> json) {
-    articleOfTheWeek = json['articleOfTheWeek'];
+  Book.fromJson(Map<String, dynamic> json) {
     author = json['author'];
+    bookOfTheWeek = json['bookOfTheWeek'];
     coverUrl = json['coverUrl'];
     date = json['date'];
     description = json['description'];
-    header = json['header'];
     id = json['id'];
+    link = json['link'];
     title = json['title'];
-    body = json['body'];
     languageCode = json['languageCode'];
     if (json['audioFiles'] != null) {
       audioFiles = <AudioFiles>[];
@@ -43,8 +40,8 @@ class Article {
     }
   }
 
-  static List<Article> articles(List data) {
-    return data.map((article) => Article.fromJson(article)).toList();
+  static List<Book> books(List data) {
+    return data.map((book) => Book.fromJson(book)).toList();
   }
 }
 
