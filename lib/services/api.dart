@@ -5,8 +5,7 @@ import 'package:apppelican_3_flutter/models/book.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
-  static const BASE_URL =
-      'https://pelicanapp-api-dev.thankfulbay-7553abc3.westeurope.azurecontainerapps.io/api/';
+  static const BASE_URL = 'https://adres.api';
 
   Future<List<Book>> getBooks() async {
     final uri = Uri.parse('${BASE_URL}books');
